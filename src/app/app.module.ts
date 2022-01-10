@@ -5,19 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {LayoutModule} from "./layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
+import { NameFilterPipe } from './name-filter.pipe';
+import {ProfileGalleryComponent} from "./profile-gallery/profile-gallery.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NameFilterPipe,
+    ProfileGalleryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
-  exports: [],
+  exports: [
+    NameFilterPipe,
+    ProfileGalleryComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

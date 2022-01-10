@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import {RouterModule} from "@angular/router";
 import {ProfileGalleryComponent} from "../profile-gallery/profile-gallery.component";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -12,8 +13,7 @@ import {ProfileGalleryComponent} from "../profile-gallery/profile-gallery.compon
   declarations: [
     HeaderComponent,
     FooterComponent,
-    LayoutComponent,
-    ProfileGalleryComponent
+    LayoutComponent
   ],
   exports: [
     LayoutComponent,
