@@ -13,6 +13,12 @@ import {RouterModule} from "@angular/router";
     FooterComponent,
     LayoutComponent
   ],
+  exports: [
+    LayoutComponent,
+    HeaderComponent,
+    FooterComponent
+
+  ],
   imports: [
     CommonModule,
     RouterModule
