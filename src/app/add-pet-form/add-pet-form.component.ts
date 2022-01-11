@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder} from '@angular/forms';
+import {FormBuilder, Validators} from '@angular/forms';
 import {PetService} from "../service/pet.service";
 
 @Component({
@@ -17,11 +17,11 @@ export class AddPetFormComponent implements OnInit {
   }
 
   addPetForm = this.formBuilder.group({
-    name: '',
-    kind: '',
-    image: '',
-    profileText: '',
-    popularity:''
+    name: ['',Validators.required],
+    kind:  ['',Validators.required],
+    image:  ['',Validators.required,],
+    profileText:  ['',Validators.required],
+    popularity: [0,Validators.required]
   });
 
   addPet(): void{

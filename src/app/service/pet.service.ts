@@ -32,7 +32,7 @@ export class PetService {
   getPetByName(name: string): Observable<Pet> {
     const url = `${this.url}/${name}`;
     return this.http.get<Pet>(url).pipe(
-      tap(_ => console.log(`fetched hero id=${name}`))
+      tap(_ => console.log(`fetched pet name=${name}`))
     )
   }
 }

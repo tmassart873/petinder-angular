@@ -12,7 +12,7 @@ import {Location} from "@angular/common";
 })
 export class SetupDateComponent implements OnInit {
 
-  @Input() pet?: Pet
+  pet?: Pet
   sendTextForm!: FormGroup;
 
   constructor(private route: ActivatedRoute, private petService: PetService, private location: Location) {
