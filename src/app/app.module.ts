@@ -9,13 +9,15 @@ import { NameFilterPipe } from './name-filter.pipe';
 import {ProfileGalleryComponent} from "./profile-gallery/profile-gallery.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AddPetFormComponent } from './add-pet-form/add-pet-form.component';
+import { SetupDateComponent } from './date/setup-date/setup-date.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NameFilterPipe,
     ProfileGalleryComponent,
-    AddPetFormComponent
+    AddPetFormComponent,
+    SetupDateComponent
   ],
   imports: [
     BrowserModule,

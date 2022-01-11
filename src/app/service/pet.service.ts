@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {map, Observable} from "rxjs";
+import {map, Observable, tap} from "rxjs";
 import {Pet} from "../model/Pet";
 
 @Injectable({
@@ -11,7 +11,7 @@ export class PetService {
 
   private url: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,) {
     this.url = `${environment.backendUrl}/pets`;
   }
 
@@ -29,4 +29,10 @@ export class PetService {
 
   }
 
+  getPetByName(name: string): Observable<Pet> {
+    const url = `${this.url}/${name}`;
+    return this.http.get<Pet>(url).pipe(
+      tap(_ => console.log(`fetched hero id=${name}`))
+    )
+  }
 }
