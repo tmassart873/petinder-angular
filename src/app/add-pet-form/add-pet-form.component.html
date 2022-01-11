@@ -1,0 +1,63 @@
+<h3>Add your pet</h3>
+
+<form [formGroup]="addPetForm">
+
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name"
+           type="text"
+           formControlName="name"
+           class="form-control"
+           placeholder="Name">
+  </div>
+
+  <div>
+    <label for="kind">
+      Kind
+    </label>
+    <input id="kind"
+           type="text"
+           formControlName="kind"
+           class="form-control"
+           placeholder="Kind">
+  </div>
+
+  <div>
+    <label for="image">
+      Picture
+    </label>
+    <input id="image"
+           type="text"
+           formControlName="image"
+           class="form-control"
+           placeholder="Picture">
+  </div>
+
+  <div>
+    <label for="profileText">
+      Profile Text
+    </label>
+    <input id="profileText"
+           type="text"
+           formControlName="profileText"
+           class="form-control"
+           placeholder="Profile Text">
+  </div>
+
+  <div>
+    <label for="popularity">
+      Popularity
+    </label>
+    <input id="popularity"
+           type="text"
+           formControlName="popularity"
+           class="form-control"
+           placeholder="Popularity">
+  </div>
+
+
+  <button class="btn btn-primary pull-right" type="submit" (click)="addPet()">Create Pet</button>
+
+</form>

@@ -7,19 +7,22 @@ import {LayoutModule} from "./layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
 import { NameFilterPipe } from './name-filter.pipe';
 import {ProfileGalleryComponent} from "./profile-gallery/profile-gallery.component";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AddPetFormComponent } from './add-pet-form/add-pet-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NameFilterPipe,
-    ProfileGalleryComponent
+    ProfileGalleryComponent,
+    AddPetFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [],
